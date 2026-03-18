@@ -3,8 +3,11 @@ class Plant():
         self.name = name
         self.height = height
         self.age = age
+
     def get_info(self):
         print(f"Created: {self.name} ({self.height}cm, {self.age} days)")
+
+
 if __name__ == "__main__":
     plants = [
         {"name": "Rose", "height": 25, "age": 30},
@@ -15,5 +18,5 @@ if __name__ == "__main__":
     ]
     print("=== Plant Factory Output ===")
     for plant in plants:
-        Plant(plant["name"], plant["height"], plant["age"]).get_info() 
+        Plant(plant["name"], plant["height"], plant["age"]).get_info()
     print(f"\nTotal plants created: {len(plants)}")

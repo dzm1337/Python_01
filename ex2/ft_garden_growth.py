@@ -5,28 +5,23 @@ class Plant:
         self.age = age
 
     def get_info(self) -> None:
-        print(f"{self.name}: {self.height}cm, {self.age} days old")
+        print(f"{self.name}: {self.height:.1f}cm, {self.age:.0f} days old")
 
-    def grow(self, days: int, daily_growth: int) -> None:
-        self.age += days
-        self.height += days * daily_growth
-        self.get_info()
+    def grow(self, daily_aging: int, daily_growth: int) -> None:
+        self.age += daily_aging
+        self.height += daily_aging * daily_growth
 
 
 if __name__ == "__main__":
-    plants: list[Plant] = [
-        Plant("Rose", 25, 30),
-        Plant("Tulip", 12, 23),
-        Plant("Sunflower", 7, 10),
-    ]
-
-    print("=== Day 1 ===")
-    for plant in plants:
+    
+    plant = Plant("Rose", 25, 30)
+    i = 1
+    daily_aging = 1
+    growth = 0
+    for _ in range(1, 8):
+        print(f"=== Day {i} ===")
         plant.get_info()
-
-    print("=== Day 7 ===")
-    for plant in plants:
-        initial_height = plant.height
-        plant.grow(6, 1)
-        growth = plant.height - initial_height
-        print(f"Growth this week +{growth}cm")
+        plant.grow(daily_aging, 1)
+        i += 1
+        growth += daily_aging
+    print(f"Growth this week: {growth - daily_aging:.0f}cm")

@@ -169,7 +169,7 @@ if __name__ == "__main__":
     print("[make sunflower grow, age and bloom]")
     sunflower.grow(30.0)
     sunflower.age_plant(20)
-    sunflower.display_info() 
+    sunflower.display_info()
     print("[statistics for Sunflower]")
     sunflower.show_stats()
 

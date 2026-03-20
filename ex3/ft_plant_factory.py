@@ -5,7 +5,7 @@ class Plant():
         self.age = age
 
     def get_info(self):
-        print(f"Created: {self.name} {self.height:.1f}cm, {self.age} days")
+        print(f"Created: {self.name} {self.height:.1f}cm, {self.age} days old")
 
 
 if __name__ == "__main__":

@@ -16,7 +16,7 @@ if __name__ == "__main__":
     
     plant = Plant("Rose", 25, 30)
     i = 1
-    daily_aging = 1
+    daily_aging = 0.8
     growth = 0
     for _ in range(1, 8):
         print(f"=== Day {i} ===")
@@ -24,4 +24,4 @@ if __name__ == "__main__":
         plant.grow(daily_aging, 1)
         i += 1
         growth += daily_aging
-    print(f"Growth this week: {growth - daily_aging:.0f}cm")
+    print(f"Growth this week: {growth - daily_aging:.1f}cm")

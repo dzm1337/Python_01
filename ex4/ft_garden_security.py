@@ -5,7 +5,10 @@ class Plant():
         self.__age = age
 
     def show(self):
-        print(f"Plant created: {self.name}: {self.__height}cm, {self.__age} days old")
+        print(
+              f"Plant created: {self.name}: {self.__height}cm"
+              f", {self.__age} days old"
+        )
 
     def set_age(self, age: int) -> None:
         if (age < 0):
@@ -34,7 +37,7 @@ if __name__ == "__main__":
 
     print("=== Garden Security System ===")
     plant1 = Plant("Rose", 15, 10)
-    
+
     plant1.show()
     plant1.set_height(25)
     plant1.set_age(30)

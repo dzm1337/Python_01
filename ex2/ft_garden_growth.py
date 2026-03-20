@@ -13,7 +13,7 @@ class Plant:
 
 
 if __name__ == "__main__":
-    
+
     plant = Plant("Rose", 25, 30)
     i = 1
     daily_aging = 0.8
